@@ -1,5 +1,5 @@
 pipeline{
-    agent {label 'Frontend'}
+    agent {label 'frontend'}
     environment {
 
         APP_SERVER = "172.31.40.90"
