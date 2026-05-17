@@ -8,8 +8,7 @@ pipeline{
         stage('pre Build Actions'){
             steps{
               sh 'npm install'
-              
-            }
+
         }
         stage('Build'){
             steps{
@@ -18,7 +17,7 @@ pipeline{
         }
         stage('post build Actions '){
             steps{
-                Sh """
+                sh """
                 echo 'cleaning old files on app server'
                 ssh jenkins@${APP_SERVER} 'rm -rf ${DEPLOY_DIR}/*'
                 echo 'copying frontend build'
