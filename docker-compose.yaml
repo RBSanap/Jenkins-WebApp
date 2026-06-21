@@ -19,7 +19,7 @@ services:
       - mysql
     ports:
       - "8080:8080"
-
+      
   frontend:
     image: rutuja2812/frontend:v1
     container_name: frontend
@@ -28,3 +28,5 @@ services:
       - backend
     ports:
       - "80:80"
+    volumes:
+      mysql_data:
