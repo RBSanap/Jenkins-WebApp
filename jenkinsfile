@@ -6,9 +6,9 @@ pipeline{
                 sh """
                 scp docker-compose.yaml ubuntu@13.232.153.39:/home/ubuntu/
                 ssh ubuntu@13.232.153.39 '''
-                cd /home/ubuntu
-                docker-compose down
-                docker-compose up -d
+                cd /home/ubuntu &&
+                docker compose down
+                docker compose up -d
                 '''
                 """
             }
